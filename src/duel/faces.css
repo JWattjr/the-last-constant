@@ -1,0 +1,7 @@
+/* Four spot inks on paper. Geometry is static; the parent controls card motion. */
+.lc-card-face{display:block;width:100%;height:100%;overflow:hidden;isolation:isolate;aspect-ratio:2/3;border-radius:inherit}
+.lc-card-face text{font-family:Scholar,"DM Sans",sans-serif;font-weight:900;text-anchor:middle;user-select:none}
+.lc-card-face .lc-face-number{font-size:80px;font-variant-numeric:lining-nums tabular-nums}
+.lc-card-face .lc-face-operator{font-size:104px}
+.lc-card-face .lc-face-overprint{mix-blend-mode:multiply}
+@media(prefers-reduced-motion:reduce){.lc-card-face,.lc-card-face *{animation:none!important;transition:none!important}}

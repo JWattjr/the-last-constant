@@ -1,0 +1,11 @@
+Create one original panoramic anime-fantasy game background for The Last Constant. Use the approved Magister Veyra image from this conversation as the reference for illustration style, lighting, palette, and material finish. This is a clean background plate; characters and game UI will be separate layers.
+
+Scene: a broad academy examination chamber built by scholar-mages. Tall original stone arches, fine brass compass constructions embedded into pale worn stone, restrained floating motes of amber ink-light, and a distant central arch suggest a world held together by mathematical craft. Eye-level camera. Calm near-symmetry, with slight organic asymmetry in the masonry so it feels inhabited and hand-designed.
+
+Rendering: confident cel-shaped lighting, delicate painterly texture in stone and cloth, and the same line weight and finish as Veyra. Warm daylight enters from upper left. Deep teal shadows provide contrast for foreground ivory hair, copper and ivory constructs, and pale health plaques. Copper and brass accents belong to instruments and architecture rather than scattered decoration. The scene should feel like part of the same illustrated world as the character.
+
+Composition: a wide, open staging area across the centre and lower middle, visually quiet enough for three foreground figures and floating values. Put the most distinctive architectural detail toward the upper and far side regions. Keep the central 45 percent coherent if the sides are cropped on a phone. Avoid bright focal spots behind where a central character's face and health label will sit. Provide depth without busy patterns across the playable area.
+
+Output: complete opaque panoramic PNG, ideally 2560 by 1024 pixels. If that exact size is unavailable, preserve the wide composition at the highest useful quality. No characters, hands, silhouettes, enemies, user interface, cards, buttons, text, letters, numbers, equations, readable runes, existing franchise symbols, logos, signatures, or watermark. This is an illustrated chamber, not an app screenshot or a finished composite battle screen.
+
+The required downloaded filename is academy-battlefield.png. Do not render that filename in the image.

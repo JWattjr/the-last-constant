@@ -1,0 +1,305 @@
+/* Risograph pop: four spot inks on warm paper, hard offset shadows, halftone and slight misregistration. */
+@font-face{font-family:Scholar;src:url('/fonts/dm-sans-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Scholar;src:url('/fonts/dm-sans-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:Scholar;src:url('/fonts/dm-sans-latin-800-normal.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:Scholar;src:url('/fonts/dm-sans-latin-900-normal.woff2') format('woff2');font-weight:900;font-display:swap}
+
+.duel-app{
+  --paper:#f6f1e7;--pink:#ff48b0;--teal:#00838a;--yellow:#ffe800;--blue:#3d5588;
+  --dots:radial-gradient(circle,rgb(61 85 136/.32) 30%,transparent 33%);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .24 0 0 0 0 .33 0 0 0 0 .53 0 0 0 .5 -.16'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  min-height:100dvh;background:var(--grain),var(--paper);color:var(--blue);font-family:Scholar,"Segoe UI",sans-serif;font-weight:600
+}
+body{margin:0}
+.duel-app,.duel-app *{box-sizing:border-box}
+:where(.duel-app button){all:unset;box-sizing:border-box;cursor:pointer}
+.duel-app :focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.duel-app button:disabled{cursor:default}
+.ink-yellow{background-color:var(--yellow)}.ink-pink{background-color:var(--pink)}.ink-teal{background-color:var(--teal);color:var(--paper)}
+
+/* Buttons */
+.riso-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 24px;background:var(--yellow);border:3px solid var(--blue);border-radius:14px;box-shadow:5px 5px 0 var(--blue);font-weight:900;font-size:16px;letter-spacing:.06em;text-transform:uppercase;transition:transform .1s,box-shadow .1s,background .2s}
+.riso-btn:hover:not(:disabled){transform:translate(-1px,-2px);box-shadow:6px 7px 0 var(--blue)}
+.riso-btn:active:not(:disabled){transform:translate(3px,3px);box-shadow:2px 2px 0 var(--blue)}
+.duel-app .riso-btn:disabled{opacity:1;background:var(--paper);color:rgb(61 85 136/.45);border-color:rgb(61 85 136/.35);box-shadow:3px 3px 0 rgb(61 85 136/.25)}
+.riso-btn.secondary{background:var(--paper)}
+.text-btn{font-weight:800;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+.duel-app .text-btn:disabled{opacity:.35}
+
+/* Board */
+.duel{max-width:1440px;margin:0 auto;min-height:100dvh;padding:12px 28px 14px;display:grid;grid-template-rows:auto auto minmax(230px,1fr) auto auto;gap:6px}
+.d-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wordmark-btn{font-weight:900;font-size:15px;line-height:.95;letter-spacing:-.01em;text-transform:uppercase;text-shadow:2px 1px 0 var(--pink)}
+.wordmark-btn b{display:block;font-size:22px;font-weight:900}
+.d-trial{display:flex;align-items:center;gap:12px;font-weight:900;font-size:16px}
+.chip{padding:3px 11px;border:2.5px solid var(--blue);border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.round{font-weight:800;font-size:13px;opacity:.8}
+.d-legend{display:flex;gap:16px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.d-legend b{display:inline-grid;place-items:center;min-width:26px;height:26px;margin-left:4px;border:2.5px solid var(--blue);border-radius:50%;background:var(--yellow);font-size:14px;font-weight:900;letter-spacing:0}
+.d-legend span:last-child b{background:var(--pink)}
+
+.d-row{display:grid;grid-template-columns:250px 1fr 250px;align-items:center;gap:18px}
+.slots{display:flex;gap:12px;justify-content:center}
+.slot{position:relative;width:84px;height:118px;border:2.5px dashed rgb(61 85 136/.4);border-radius:12px;display:grid;place-items:center;flex:none}
+.slot.filled{border-color:transparent}
+button.slot{display:grid}
+.slots.mine .slot.filled:hover .d-card{transform:translateY(-4px) rotate(-2deg)}
+.slots .slot+.slot.merge::before{content:'+';position:absolute;left:-17px;top:50%;transform:translateY(-50%);z-index:2;width:22px;height:22px;border-radius:50%;background:var(--yellow);border:2.5px solid var(--blue);display:grid;place-items:center;font-size:15px;font-weight:900;line-height:1}
+.d-status{margin:0;font-weight:800;font-style:italic;font-size:13px;opacity:.75}
+
+.medallion{position:relative;display:flex;align-items:center;gap:12px}
+.medallion .portrait{flex:none;width:76px;height:76px;border-radius:50%;border:3px solid var(--blue);overflow:hidden;background:var(--yellow);box-shadow:4px 3px 0 var(--pink)}
+.medallion img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;transform:scale(1.25);transform-origin:50% 38%}
+.who{display:grid;gap:3px;min-width:140px}
+.who b{font-size:17px;font-weight:900}
+.who small{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.hp{display:block;height:13px;border:2.5px solid var(--blue);border-radius:999px;overflow:hidden;background:var(--paper)}
+.hp i{display:block;height:100%;background-color:var(--yellow);background-image:radial-gradient(circle,rgb(255 72 176/.7) 30%,transparent 34%);background-size:5px 5px;transform-origin:left;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.hp-text{font-size:12px;font-weight:900}
+.hit{position:absolute;left:26px;top:-14px;font-size:36px;font-weight:900;color:var(--pink);-webkit-text-stroke:2px var(--blue);paint-order:stroke;animation:hit 1.6s ease-out forwards;pointer-events:none}
+@keyframes hit{0%{transform:translateY(10px) scale(.5);opacity:0}15%{transform:translateY(0) scale(1.15);opacity:1}70%{opacity:1}100%{transform:translateY(-30px);opacity:0}}
+
+/* The rune */
+.d-stage{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px}
+.d-howto{justify-self:end;max-width:260px;text-align:right;font-size:14px;line-height:1.45;font-weight:700}
+.d-howto b{font-weight:900}
+.d-side{justify-self:start;max-width:380px}
+.d-tip{margin:0;max-width:300px;font-size:13px;line-height:1.5;font-weight:700;padding:10px 14px;border:2.5px solid var(--blue);border-radius:12px;background:var(--paper);box-shadow:4px 4px 0 var(--teal)}
+.rune{position:relative;width:clamp(210px,31vh,300px);aspect-ratio:1;display:grid;place-items:center}
+.rune svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rune svg *{fill:none;stroke-width:3;stroke-linejoin:round}
+.rune .misreg{stroke:var(--pink);transform:translate(4px,3px);mix-blend-mode:multiply}
+.rune .main{stroke:var(--blue)}
+.rune .main .disc{fill:var(--yellow);stroke:var(--blue);stroke-width:3.5}
+.rune-text{position:relative;display:grid;justify-items:center;gap:2px;text-align:center;max-width:68%}
+.rune-text small{font-size:12px;font-weight:900;letter-spacing:.28em;text-transform:uppercase}
+.rune-text small .var{text-transform:none;font-style:italic;font-size:1.35em;letter-spacing:0}
+.rune-text b{font-size:clamp(60px,10vh,104px);line-height:.9;font-weight:900;letter-spacing:-.03em;text-shadow:4px 3px 0 var(--pink)}
+.rune-text b.equation{font-size:clamp(22px,3.6vh,32px);line-height:1.1;letter-spacing:-.01em;white-space:nowrap;text-shadow:2px 2px 0 var(--pink)}
+.rune.resonant::after{content:'';position:absolute;inset:-6%;border-radius:50%;border:8px solid var(--pink);animation:burst 1.1s ease-out forwards}
+.rune.resonant .rune-text b{animation:throb .5s ease-out 2}
+@keyframes burst{from{transform:scale(.7);opacity:1}to{transform:scale(1.45);opacity:0}}
+@keyframes throb{50%{transform:scale(1.12)}}
+
+/* Verdict after a reveal */
+.verdict{display:grid;gap:7px;padding:15px 18px;border:3px solid var(--blue);border-radius:16px;background:var(--paper);box-shadow:6px 6px 0 var(--blue);animation:pop .35s cubic-bezier(.16,1,.3,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.verdict.player{box-shadow:6px 6px 0 var(--teal)}.verdict.opponent{box-shadow:6px 6px 0 var(--pink)}.verdict.both{box-shadow:6px 6px 0 var(--yellow)}
+.verdict h2{margin:0;font-size:25px;font-weight:900;line-height:1;text-shadow:2px 2px 0 var(--pink)}
+.verdict dl{margin:0;display:grid;gap:3px}
+.verdict dl div{display:flex;gap:10px;align-items:baseline}
+.verdict dt{min-width:46px;font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.verdict dd{margin:0;font-size:16px;font-weight:900}
+.verdict em{font-style:normal;font-size:11px;font-weight:900;padding:1px 8px;margin-left:6px;border:2px solid var(--blue);border-radius:999px;white-space:nowrap}
+.verdict em.exact{background:var(--yellow)}
+.verdict p{margin:0;font-size:13px;line-height:1.4}
+.verdict .damage{display:flex;gap:8px}
+.verdict .damage span{padding:2px 10px;border-radius:999px;background:var(--pink);color:var(--paper);font-weight:900}
+.verdict .working{font-weight:900;font-size:15px}
+.verdict .solution{padding:6px 10px;border:2px dashed var(--teal);border-radius:10px;background:rgb(0 131 138/.08)}
+.verdict .note{font-size:12px;font-weight:800;color:var(--teal)}
+.verdict .riso-btn{justify-self:start;margin-top:4px;padding:10px 18px;font-size:14px}
+
+/* Your spell */
+.spell-build{display:grid;gap:8px;justify-items:center}
+.readout{margin:0;min-height:28px;padding:3px 14px;font-size:18px;font-weight:900;text-align:center;border-radius:999px;white-space:pre}
+.readout.exact{background:var(--yellow);box-shadow:0 0 0 2.5px var(--blue)}
+.readout.nudge{color:var(--pink)}
+.d-actions{display:grid;gap:9px;justify-items:start}
+
+/* Cards */
+.d-hand{display:flex;justify-content:center;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:8px 0 4px;min-height:160px}
+.d-card{position:relative;display:block;flex:none;width:102px;height:144px;overflow:hidden;border:3px solid var(--blue);border-radius:13px;background:var(--paper);box-shadow:4px 4px 0 var(--blue);transform:rotate(var(--tilt,0deg));transition:transform .16s ease-out,box-shadow .16s,opacity .2s}
+.duel-app button.d-card:hover:not(:disabled){transform:translateY(-12px) rotate(0deg);box-shadow:5px 7px 0 var(--blue)}
+.d-card.blocked{opacity:.4}
+.duel-app button.d-card:disabled{opacity:.55}
+.d-card.small{width:78px;height:110px;border-width:2.5px;border-radius:11px;box-shadow:3px 3px 0 var(--blue)}
+.d-card.back{background:var(--pink) var(--dots);background-size:6px 6px}
+.d-card.back::after{content:'';position:absolute;inset:22% 14%;border:3px solid var(--teal);border-radius:50%;box-shadow:inset 0 0 0 7px var(--paper),inset 0 0 0 10px var(--yellow)}
+.flip{animation:flip .42s ease-out backwards}
+.slot:nth-child(2) .flip{animation-delay:.08s}.slot:nth-child(3) .flip{animation-delay:.16s}.slot:nth-child(4) .flip{animation-delay:.24s}.slot:nth-child(5) .flip{animation-delay:.32s}
+@keyframes flip{from{transform:rotateY(90deg)}}
+
+.face{position:absolute;inset:0;display:grid;place-items:center}
+.face b{font-weight:900}
+.face.stone{--ink:var(--yellow)}
+.face.stone.ink-pink{--ink:var(--pink);background:none;color:inherit}.face.stone.ink-teal{--ink:var(--teal);background:none;color:inherit}.face.stone.ink-yellow{background:none}
+.pebble{position:absolute;inset:15% 11% 25%;border-radius:47% 53% 44% 56%/56% 44% 56% 44%;background:var(--ink) var(--dots);background-size:auto;background-image:radial-gradient(circle,rgb(61 85 136/.28) 30%,transparent 33%);background-size:6px 6px;border:3px solid var(--blue)}
+.face.stone b{position:relative;margin-top:-14%;font-size:58px;line-height:1;text-shadow:3px 2px 0 var(--pink)}
+.face.stone.ink-pink b{text-shadow:3px 2px 0 var(--yellow)}
+.face.stone.ink-teal b{color:var(--paper);-webkit-text-stroke:2px var(--blue);paint-order:stroke;text-shadow:3px 2px 0 var(--blue)}
+.pips{position:absolute;left:10%;right:10%;bottom:7%;display:flex;flex-wrap:wrap;justify-content:center;gap:3px}
+.pips i{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.face.glyph{background:var(--dots);background-size:7px 7px}
+.face.glyph .ring{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;border:3px solid var(--blue);background:var(--paper);box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 8px var(--teal)}
+.face.glyph b{position:relative;font-size:62px;line-height:1;text-shadow:3px 2px 0 var(--pink)}
+.face.familiar{place-items:end start}
+.face.familiar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.face.familiar .op{position:absolute;top:5px;left:5px;padding:2px 8px;font-size:19px;line-height:1.1;background:var(--paper);border:2.5px solid var(--blue);border-radius:9px}
+.face.familiar .stars{position:absolute;top:5px;right:5px;padding:2px 5px;font-size:10px;line-height:1.2;background:var(--yellow);border:2px solid var(--blue);border-radius:999px;letter-spacing:-.06em}
+.face.familiar.rare .stars{background:var(--teal);color:var(--paper)}.face.familiar.legendary .stars{background:var(--pink);color:var(--paper)}
+.face.familiar .name{position:relative;margin:0 0 6px 5px;padding:1px 7px;font-size:10.5px;font-weight:900;line-height:1.25;letter-spacing:.02em;background:var(--paper);border:2px solid var(--blue);border-radius:7px;transform:rotate(-3deg)}
+.small .face.stone b{font-size:42px}.small .pips i{width:4px;height:4px}.small .pips{gap:2px}
+.small .face.glyph b{font-size:44px}
+.small .face.familiar .op{font-size:14px;padding:1px 6px}.small .face.familiar .name,.small .face.familiar .stars{display:none}
+
+/* Full card, laid out like a printed TCG card: art window, operation, rarity, name sticker, family, rules box, footer. */
+.tcg{display:grid;grid-template-rows:auto auto 1fr auto;width:220px;aspect-ratio:5/7;padding:9px;border:3px solid var(--blue);border-radius:16px;background:var(--paper);box-shadow:6px 6px 0 var(--blue)}
+.tcg.rare{box-shadow:6px 6px 0 var(--teal)}.tcg.legendary{box-shadow:6px 6px 0 var(--pink)}
+.tcg-art{position:relative;aspect-ratio:1/1.02;border:2.5px solid var(--blue);border-radius:10px;overflow:hidden;background:var(--yellow)}
+.tcg-art img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.tcg-op{position:absolute;top:6px;left:6px;padding:1px 10px 3px;font-size:28px;line-height:1.05;background:var(--paper);border:2.5px solid var(--blue);border-radius:11px;text-shadow:2px 2px 0 var(--pink)}
+.tcg-stars{position:absolute;top:7px;right:7px;padding:3px 7px;font-size:13px;font-weight:900;line-height:1.1;background:var(--paper);border:2.5px solid var(--blue);border-radius:999px}
+.tcg.legendary .tcg-stars{background:var(--pink);color:var(--paper)}.tcg.rare .tcg-stars{background:var(--teal);color:var(--paper)}
+.tcg-name{position:absolute;left:7px;bottom:7px;padding:2px 10px 3px;font-size:19px;font-weight:900;line-height:1.1;background:var(--paper);border:2.5px solid var(--blue);border-radius:10px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--pink)}
+.tcg-family{position:absolute;right:8px;bottom:8px;width:28px;height:28px;display:grid;place-items:center;font-size:17px;font-weight:900;background:var(--yellow);border:2.5px solid var(--blue);transform:rotate(45deg)}
+.tcg-family>i{transform:rotate(-45deg);font-style:normal}
+.tcg-title{margin:7px 0 4px;text-align:center;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.tcg-text{display:grid;align-content:start;gap:4px;padding:7px 9px;border:2px dashed rgb(61 85 136/.55);border-radius:9px;font-size:11.5px;line-height:1.35;text-align:center}
+.tcg-text p{margin:0}
+.tcg-text .flavor{font-weight:600;font-style:italic;opacity:.8}
+.tcg footer{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+
+/* End dialog */
+.d-modal-back{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:16px;background:rgb(61 85 136/.45)}
+.d-modal{display:grid;gap:12px;width:min(440px,100%);padding:28px;text-align:center;border:3px solid var(--blue);border-radius:20px;background:var(--grain),var(--paper);box-shadow:9px 9px 0 var(--pink);animation:pop .35s cubic-bezier(.16,1,.3,1)}
+.d-modal h2{margin:0;font-size:32px;font-weight:900;line-height:1;text-shadow:3px 2px 0 var(--pink)}
+.d-modal p{margin:0;font-size:14px;line-height:1.5}
+.stats{display:flex;justify-content:center;gap:26px;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.stats b{display:block;font-size:34px;letter-spacing:0}
+.best b{font-weight:900}
+.actions{display:grid;gap:10px;justify-items:center}
+.actions .riso-btn{width:100%}
+
+/* Trial select */
+.menu{max-width:1120px;margin:0 auto;padding:36px 24px 48px;display:grid;gap:26px}
+.riso-title{margin:0;font-size:clamp(46px,8vw,92px);font-weight:900;line-height:.86;letter-spacing:-.045em;text-transform:uppercase;text-shadow:5px 4px 0 var(--pink)}
+.riso-title span{display:block;color:var(--teal);text-shadow:5px 4px 0 var(--yellow)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.steps li{display:flex;align-items:center;gap:12px;padding:12px 14px;font-size:14px;line-height:1.35;border:3px solid var(--blue);border-radius:14px;background:var(--paper);box-shadow:4px 4px 0 var(--blue)}
+.steps li>b{flex:none;display:grid;place-items:center;width:30px;height:30px;border:2.5px solid var(--blue);border-radius:50%;background:var(--yellow);font-weight:900}
+.steps em{font-style:normal;font-weight:900}
+.trials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trial{display:grid;align-content:start;gap:7px;padding:18px 20px;border:3px solid var(--blue);border-radius:18px;box-shadow:6px 6px 0 var(--blue);transition:transform .12s,box-shadow .12s}
+.trial:hover{transform:translate(-2px,-3px);box-shadow:8px 9px 0 var(--blue)}
+.trial .numeral{font-size:52px;font-weight:900;line-height:.9;color:var(--paper);-webkit-text-stroke:3px var(--blue);paint-order:stroke}
+.trial b{font-size:23px;font-weight:900}
+.trial span{font-size:14px;line-height:1.4}
+.trial code{justify-self:start;padding:4px 9px;font:inherit;font-size:14px;font-weight:900;color:var(--blue);background:var(--paper);border:2.5px solid var(--blue);border-radius:9px}
+.trial small{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.classic-link{justify-self:start;font-size:13px;font-weight:800;color:var(--blue)}
+
+/* Board frame: a double riso rule around the whole table. */
+.duel{position:relative;padding:18px 34px 14px}
+.duel::before{content:'';position:absolute;inset:6px;border:3px solid var(--blue);border-radius:26px;box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 7.5px var(--pink);pointer-events:none}
+
+/* Ribbon banners sweep across the stage for round starts and results. */
+.d-stage{position:relative}
+.ribbon{position:absolute;left:-34px;right:-34px;top:50%;z-index:6;display:grid;justify-items:center;gap:3px;padding:12px 16px 13px;transform:translateY(-50%);background:rgb(246 241 231/.94);border-block:3px solid var(--blue);box-shadow:0 5px 0 var(--pink);pointer-events:none;animation:ribbon 1.5s cubic-bezier(.2,.8,.2,1) forwards}
+.ribbon b{margin-right:-.32em;font-size:clamp(30px,5vh,46px);font-weight:900;line-height:1;letter-spacing:.32em;text-transform:uppercase;text-shadow:3px 2px 0 var(--pink)}
+.ribbon span{font-size:14px;font-weight:800;letter-spacing:.03em}
+.ribbon.resonance{background:rgb(255 232 0/.95)}
+.ribbon.win{box-shadow:0 5px 0 var(--teal)}
+.ribbon.lose b{color:var(--pink);text-shadow:3px 2px 0 var(--blue)}
+@keyframes ribbon{0%{clip-path:inset(0 50% 0 50%);opacity:0}14%{clip-path:inset(0 0 0 0);opacity:1}80%{opacity:1}100%{opacity:0}}
+.verdict{animation:pop .35s .85s cubic-bezier(.16,1,.3,1) backwards}
+
+/* After a reveal the rune shows what you made; the opponent's value sits on its rim. */
+.rune-text b.made{animation:stamp .5s cubic-bezier(.16,1,.3,1)}
+.stamp{padding:2px 10px;font-size:13px;font-style:normal;font-weight:900;letter-spacing:.08em;text-transform:uppercase;background:var(--paper);border:2.5px solid var(--blue);border-radius:999px}
+.stamp.exact{background:var(--pink);color:var(--paper)}
+@keyframes stamp{from{transform:scale(1.8);opacity:0}}
+.their-value{position:absolute;top:3%;right:-8%;padding:4px 11px;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;background:var(--paper);border:2.5px solid var(--blue);border-radius:999px;box-shadow:3px 3px 0 var(--blue);animation:pop .35s .3s backwards}
+.their-value b{font-size:17px}
+.their-value.exact{background:var(--yellow)}
+
+/* Cards drop into slots, and lift towards the rune when cast. */
+.drop{animation:drop .28s cubic-bezier(.16,1,.3,1)}
+@keyframes drop{from{transform:translateY(-24px) scale(.9);opacity:0}}
+.slots.mine.casting .d-card{animation:cast .6s cubic-bezier(.3,.1,.3,1) backwards}
+.slots.mine.casting .slot:nth-child(2) .d-card{animation-delay:.05s}.slots.mine.casting .slot:nth-child(3) .d-card{animation-delay:.1s}.slots.mine.casting .slot:nth-child(4) .d-card{animation-delay:.15s}.slots.mine.casting .slot:nth-child(5) .d-card{animation-delay:.2s}
+@keyframes cast{40%{transform:translateY(-36px) rotate(-4deg) scale(1.06)}}
+
+/* The hand fans along the bottom edge; a hovered card lifts and grows. */
+.d-hand{gap:0;padding:16px 0 0}
+.d-hand .d-card{margin:0 -7px;transform:translateY(var(--arc,0px)) rotate(var(--tilt,0deg));transform-origin:50% 120%}
+.duel-app .d-hand button.d-card:hover:not(:disabled){z-index:4;transform:translateY(-28px) scale(1.16) rotate(0deg);box-shadow:6px 9px 0 var(--blue)}
+.help-btn{display:inline-grid;place-items:center;width:28px;height:28px;font-size:15px;font-weight:900;background:var(--paper);border:2.5px solid var(--blue);border-radius:50%;box-shadow:2px 2px 0 var(--blue)}
+
+/* Victory confetti in the four inks. */
+.confetti{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.confetti i{position:absolute;top:-30px;border-radius:2px;transform:rotate(var(--spin));animation:fall 3.2s linear infinite}
+.confetti i.pink{background:var(--pink)}.confetti i.teal{background:var(--teal)}.confetti i.yellow{background:var(--yellow);box-shadow:0 0 0 1px var(--blue)}.confetti i.blue{background:var(--blue)}
+@keyframes fall{to{transform:translateY(112vh) rotate(calc(var(--spin) + 540deg))}}
+.d-modal .kicker{margin:0}
+.d-modal h2.victory{margin-right:-.18em;font-size:56px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);text-shadow:4px 3px 0 var(--yellow)}
+.d-modal.wide{width:min(560px,100%)}
+.d-modal .rules{display:grid;gap:8px;margin:0;padding-left:22px;text-align:left;font-size:14px;line-height:1.45}
+.d-modal .rules em{font-style:normal;font-weight:900}
+.duel-app.duel-app-overlay{position:fixed;inset:0;z-index:60;min-height:0;background:none;pointer-events:none}
+.duel-app-overlay .d-modal-back{pointer-events:auto}
+
+/* Title screen: a big riso wordmark, three buttons, a fan of familiars. */
+.title-screen{max-width:1240px;min-height:100dvh;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px}
+.kicker{margin:0 0 10px;font-size:12px;font-weight:900;letter-spacing:.24em;text-transform:uppercase}
+.lede{max-width:520px;margin:18px 0 26px;font-size:19px;line-height:1.5}
+.lede b{padding:0 5px;background:var(--yellow)}
+.title-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.ladder{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 0;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.ladder span{padding:4px 11px;border:2.5px solid var(--blue);border-radius:999px}
+.ladder i{font-style:normal}
+.title-fan{position:relative;height:520px}
+.fan-card{position:absolute;top:50%;left:50%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.fan-card .tcg{width:250px}
+.fan-card.f0{transform:translate(-110%,-48%) rotate(-12deg)}
+.fan-card.f1{z-index:2;transform:translate(-50%,-56%)}
+.fan-card.f2{transform:translate(10%,-48%) rotate(12deg)}
+.title-fan:hover .fan-card.f0{transform:translate(-124%,-50%) rotate(-15deg)}
+.title-fan:hover .fan-card.f2{transform:translate(24%,-50%) rotate(15deg)}
+
+/* Trial and familiar screens */
+.screen-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+.screen-head>:last-child{justify-self:end}
+.screen-title{margin:0;font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.02em;text-transform:uppercase;text-shadow:3px 2px 0 var(--pink)}
+.screen-lede{max-width:640px;margin:0;font-size:16px;line-height:1.5}
+.familiar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px;justify-items:center}
+.zoomable{display:block;transition:transform .15s}
+.zoomable:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.zoom-card{display:grid;justify-items:center;padding:6px 0 4px}
+.zoom-card .tcg{width:min(340px,78vw)}
+.fusion-teaser{padding:18px 22px;border:3px dashed var(--blue);border-radius:18px;background:rgb(255 232 0/.18)}
+.fusion-teaser h2{margin:0 0 6px;font-size:22px;font-weight:900;text-transform:uppercase}
+.fusion-teaser p{margin:0 0 10px}
+.fusion-teaser ul{display:grid;gap:7px;margin:0;padding-left:20px;font-size:15px}
+.fusion-teaser em{margin-left:10px;padding:1px 8px;font-size:12px;font-style:normal;font-weight:800;background:var(--paper);border:2px solid var(--blue);border-radius:999px}
+
+@media(max-width:1000px){.title-screen{grid-template-columns:1fr}.title-fan{height:420px}.fan-card .tcg{width:200px}}
+@media(max-width:560px){
+  .duel::before{inset:3px;border-radius:18px}
+  .title-screen{padding:24px 16px}.title-fan{height:330px;overflow:hidden}.fan-card .tcg{width:160px}
+  .ribbon{left:-12px;right:-12px}.ribbon b{font-size:24px;letter-spacing:.16em;margin-right:-.16em}
+  .their-value{right:0}
+  .screen-head{grid-template-columns:auto 1fr}.screen-head>:last-child{display:none}
+  .d-hand .d-card{margin:0 -4px}
+}
+
+@media(max-width:1100px){
+  .duel{grid-template-rows:none;gap:14px}
+  .d-row,.d-stage{grid-template-columns:1fr;justify-items:center}
+  .d-howto{justify-self:center;text-align:center;max-width:420px}.d-side{justify-self:center}
+  .d-legend{display:none}
+  .steps,.trials{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .duel{padding:10px 12px 18px}
+  .d-trial{font-size:13px;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+  .slots{gap:6px}.slot{width:58px;height:82px}
+  .slots .slot+.slot.merge::before{left:-12px;width:17px;height:17px;font-size:12px}
+  .d-card.small{width:54px;height:76px;border-width:2px;box-shadow:2px 2px 0 var(--blue)}
+  .small .face.stone b{font-size:30px}.small .face.glyph b{font-size:32px}.small .pips{display:none}
+  .d-hand{gap:8px}.d-card{width:82px;height:116px}
+  .face.stone b{font-size:44px}.face.glyph b{font-size:46px}.pips i{width:4px;height:4px}
+  .readout{font-size:15px;white-space:normal}
+  .tcg{width:min(300px,100%)}
+}
+@media(prefers-reduced-motion:reduce){.duel-app *,.duel-app *::before,.duel-app *::after{animation:none!important;transition:none!important}}

@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T20:02:31.003563+00:00",
+  "title": "Design System: The Last Constant",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Academy Parchment",
+        "tonalRamp": [
+          "oklch(15.000% 0.01780 92.686)",
+          "oklch(26.429% 0.01780 92.686)",
+          "oklch(37.857% 0.01780 92.686)",
+          "oklch(49.286% 0.01780 92.686)",
+          "oklch(60.714% 0.01780 92.686)",
+          "oklch(72.143% 0.01780 92.686)",
+          "oklch(83.571% 0.01780 92.686)",
+          "oklch(95.000% 0.01780 92.686)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Manuscript Ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.03776 184.960)",
+          "oklch(26.429% 0.03776 184.960)",
+          "oklch(37.857% 0.03776 184.960)",
+          "oklch(49.286% 0.03776 184.960)",
+          "oklch(60.714% 0.03776 184.960)",
+          "oklch(72.143% 0.03776 184.960)",
+          "oklch(83.571% 0.03776 184.960)",
+          "oklch(95.000% 0.03776 184.960)"
+        ]
+      },
+      "teal": {
+        "role": "primary",
+        "displayName": "Spellcraft Teal",
+        "tonalRamp": [
+          "oklch(15.000% 0.06438 183.797)",
+          "oklch(26.429% 0.06438 183.797)",
+          "oklch(37.857% 0.06438 183.797)",
+          "oklch(49.286% 0.06438 183.797)",
+          "oklch(60.714% 0.06438 183.797)",
+          "oklch(72.143% 0.06438 183.797)",
+          "oklch(83.571% 0.06438 183.797)",
+          "oklch(95.000% 0.06438 183.797)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Sage Annotation",
+        "tonalRamp": [
+          "oklch(15.000% 0.02415 125.024)",
+          "oklch(26.429% 0.02415 125.024)",
+          "oklch(37.857% 0.02415 125.024)",
+          "oklch(49.286% 0.02415 125.024)",
+          "oklch(60.714% 0.02415 125.024)",
+          "oklch(72.143% 0.02415 125.024)",
+          "oklch(83.571% 0.02415 125.024)",
+          "oklch(95.000% 0.02415 125.024)"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Antique Brass",
+        "tonalRamp": [
+          "oklch(15.000% 0.07278 87.207)",
+          "oklch(26.429% 0.07278 87.207)",
+          "oklch(37.857% 0.07278 87.207)",
+          "oklch(49.286% 0.07278 87.207)",
+          "oklch(60.714% 0.07278 87.207)",
+          "oklch(72.143% 0.07278 87.207)",
+          "oklch(83.571% 0.07278 87.207)",
+          "oklch(95.000% 0.07278 87.207)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Folio Rule",
+        "tonalRamp": [
+          "oklch(15.000% 0.02476 99.170)",
+          "oklch(26.429% 0.02476 99.170)",
+          "oklch(37.857% 0.02476 99.170)",
+          "oklch(49.286% 0.02476 99.170)",
+          "oklch(60.714% 0.02476 99.170)",
+          "oklch(72.143% 0.02476 99.170)",
+          "oklch(83.571% 0.02476 99.170)",
+          "oklch(95.000% 0.02476 99.170)"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Fired Clay",
+        "tonalRamp": [
+          "oklch(15.000% 0.10134 31.193)",
+          "oklch(26.429% 0.10134 31.193)",
+          "oklch(37.857% 0.10134 31.193)",
+          "oklch(49.286% 0.10134 31.193)",
+          "oklch(60.714% 0.10134 31.193)",
+          "oklch(72.143% 0.10134 31.193)",
+          "oklch(83.571% 0.10134 31.193)",
+          "oklch(95.000% 0.10134 31.193)"
+        ]
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "tonalRamp": [
+          "oklch(15.000% 0.02978 182.342)",
+          "oklch(26.429% 0.02978 182.342)",
+          "oklch(37.857% 0.02978 182.342)",
+          "oklch(49.286% 0.02978 182.342)",
+          "oklch(60.714% 0.02978 182.342)",
+          "oklch(72.143% 0.02978 182.342)",
+          "oklch(83.571% 0.02978 182.342)",
+          "oklch(95.000% 0.02978 182.342)"
+        ]
+      },
+      "outer-canvas": {
+        "role": "neutral",
+        "displayName": "Outer Canvas",
+        "tonalRamp": [
+          "oklch(15.000% 0.01798 92.695)",
+          "oklch(26.429% 0.01798 92.695)",
+          "oklch(37.857% 0.01798 92.695)",
+          "oklch(49.286% 0.01798 92.695)",
+          "oklch(60.714% 0.01798 92.695)",
+          "oklch(72.143% 0.01798 92.695)",
+          "oklch(83.571% 0.01798 92.695)",
+          "oklch(95.000% 0.01798 92.695)"
+        ]
+      },
+      "chamber": {
+        "role": "primary",
+        "displayName": "Chamber Teal",
+        "tonalRamp": [
+          "oklch(15.000% 0.04039 185.289)",
+          "oklch(26.429% 0.04039 185.289)",
+          "oklch(37.857% 0.04039 185.289)",
+          "oklch(49.286% 0.04039 185.289)",
+          "oklch(60.714% 0.04039 185.289)",
+          "oklch(72.143% 0.04039 185.289)",
+          "oklch(83.571% 0.04039 185.289)",
+          "oklch(95.000% 0.04039 185.289)"
+        ]
+      },
+      "hand-surface": {
+        "role": "neutral",
+        "displayName": "Hand Surface",
+        "tonalRamp": [
+          "oklch(15.000% 0.01895 96.876)",
+          "oklch(26.429% 0.01895 96.876)",
+          "oklch(37.857% 0.01895 96.876)",
+          "oklch(49.286% 0.01895 96.876)",
+          "oklch(60.714% 0.01895 96.876)",
+          "oklch(72.143% 0.01895 96.876)",
+          "oklch(83.571% 0.01895 96.876)",
+          "oklch(95.000% 0.01895 96.876)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Copper Focus",
+        "tonalRamp": [
+          "oklch(15.000% 0.11370 64.536)",
+          "oklch(26.429% 0.11370 64.536)",
+          "oklch(37.857% 0.11370 64.536)",
+          "oklch(49.286% 0.11370 64.536)",
+          "oklch(60.714% 0.11370 64.536)",
+          "oklch(72.143% 0.11370 64.536)",
+          "oklch(83.571% 0.11370 64.536)",
+          "oklch(95.000% 0.11370 64.536)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Academy Display",
+        "purpose": "Modal titles; locally bundled Cormorant Garamond under the Constant alias."
+      },
+      "headline": {
+        "displayName": "Chapter Headline",
+        "purpose": "Chapter heading in the masthead."
+      },
+      "title": {
+        "displayName": "Folio Title",
+        "purpose": "Apprentice and hand section headings."
+      },
+      "body": {
+        "displayName": "Scholar Body",
+        "purpose": "Root operational typography; locally bundled DM Sans under the Scholar alias."
+      },
+      "label": {
+        "displayName": "Ink Caption",
+        "purpose": "Tracked uppercase Ink label; other local labels vary."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shell-ambient",
+        "value": "0 12px 60px #1b332423",
+        "purpose": "Centered shell separation."
+      },
+      {
+        "name": "cast-action",
+        "value": "0 4px 10px #214c3d20",
+        "purpose": "Casting button lift."
+      },
+      {
+        "name": "card-rest",
+        "value": "0 7px 13px #4b4d3620",
+        "purpose": "Resting formula card."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 14px 18px #3c51352b",
+        "purpose": "Hovered formula card."
+      },
+      {
+        "name": "card-selected",
+        "value": "0 10px 20px #2e54452b",
+        "purpose": "Selected formula card."
+      },
+      {
+        "name": "modal",
+        "value": "0 20px 80px #061d25a8",
+        "purpose": "Dialog above the battlefield."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-transition",
+        "value": "background .18s,color .18s,transform .18s,box-shadow .18s",
+        "purpose": "Shared button state transition."
+      },
+      {
+        "name": "card-transition",
+        "value": "transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s",
+        "purpose": "Formula card lift."
+      },
+      {
+        "name": "health-transition",
+        "value": "transform .4s ease-out",
+        "purpose": "Health-track scaling."
+      },
+      {
+        "name": "sigil-cast",
+        "value": "cast .85s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Scale, rotation, and brightness pulse."
+      },
+      {
+        "name": "formula-cast",
+        "value": "formula-cast .85s ease-out",
+        "purpose": "Formula briefly fades."
+      },
+      {
+        "name": "struck",
+        "value": "struck .5s ease-out",
+        "purpose": "Portrait strike feedback."
+      },
+      {
+        "name": "enemy-intention",
+        "value": "intention 1s ease-out",
+        "purpose": "Enemy intention pulse."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1450px",
+        "query": "(min-width:1450px)"
+      },
+      {
+        "name": "compact-max",
+        "value": "1100px",
+        "query": "(max-width:1100px)"
+      },
+      {
+        "name": "tablet-max",
+        "value": "800px",
+        "query": "(max-width:800px)"
+      },
+      {
+        "name": "phone-max",
+        "value": "520px",
+        "query": "(max-width:520px)"
+      }
+    ],
+    "focus": {
+      "outline": "3px solid #b87936",
+      "outlineOffset": "5px",
+      "appliesTo": "button:focus-visible,a:focus-visible"
+    },
+    "overlay": {
+      "background": "#102c29d9",
+      "backdropFilter": "blur(5px)",
+      "purpose": "Dialog backdrop; reduced motion disables blur."
+    },
+    "reducedMotion": {
+      "query": "(prefers-reduced-motion:reduce)",
+      "animation": "none!important",
+      "transition": "none!important",
+      "scrollBehavior": "auto!important",
+      "backdropFilter": "none"
+    },
+    "rampPolicy": "The eight-step OKLCH tonal ramps are synthesized preview metadata only. They are not implemented CSS tokens or permission to alter the source palette.",
+    "sources": [
+      "src/styles.css",
+      "src/components/Art.tsx",
+      "src/App.tsx",
+      "PRODUCT.md",
+      ".impeccable/surface.md"
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary continuation",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The full-width action used by introduction, rules, and result dialogs.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-primary-button\">Continue<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-primary-button{background:var(--teal,#2c6961);color:#f8f0db;padding:13px 20px;border-radius:3px;display:flex;gap:16px;align-items:center;justify-content:center;width:100%;font-size:12px;position:relative}.ds-primary-button:hover{background:#194b42}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Cast spell",
+      "kind": "button",
+      "refersTo": "button-cast",
+      "description": "The teal casting action with the current geometry and forward arrow.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-cast-button\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" aria-hidden=\"true\"><path d=\"m16 4 13 23H3Z\"/></svg><span>Cast spell</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-cast-button{display:flex;align-items:center;gap:10px;background:var(--teal,#2c6961);color:#faf4e1;width:100%;padding:11px 15px;border-radius:3px;font-size:12px;font-weight:500;box-shadow:0 4px 10px #214c3d20}.ds-cast-button>svg:last-child{margin-left:auto}.ds-cast-button:not(:disabled):hover{background:#1f5149}.ds-cast-button:disabled{background:#8b9989}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Draw formula",
+      "kind": "button",
+      "refersTo": "button-draw",
+      "description": "A bordered secondary action with a separated Ink cost.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-draw-button\">Draw formula<span><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C10 7 5 12 5 16a7 7 0 0 0 14 0c0-4-5-9-7-13Z\"/><path d=\"M9 16c0 2 1 3 3 3\"/></svg> 1</span></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-draw-button{display:flex;align-items:center;gap:18px;background:transparent;border:1px solid #aeb49c;border-radius:3px;padding:9px 12px;font-size:10px}.ds-draw-button>span{display:flex;align-items:center;gap:4px;color:var(--teal,#2c6961);border-left:1px solid #babfa8;padding-left:12px}.ds-draw-button:not(:disabled):hover{background:#d7decb}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "End turn",
+      "kind": "button",
+      "refersTo": "button-end-turn",
+      "description": "A distinct darker green turn-completion action.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-end-turn\">End turn<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-end-turn{width:100%;display:flex;justify-content:space-between;align-items:center;background:#304b3f;color:#f5f0dd;padding:12px 15px;font-size:11px;border-radius:3px;margin:18px 0 8px}.ds-end-turn:not(:disabled):hover{background:#1c3d32}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Spellbook action",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "The circular masthead control for opening the rules.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-icon-button\" aria-label=\"Open spellbook and rules\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 6C8 3 3 4 3 4v15s5-1 9 2c4-3 9-2 9-2V4s-5-1-9 2Zm0 0v15\"/></svg></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-icon-button{background:transparent;padding:10px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line,#cbc8b6);border-radius:50%}.ds-icon-button:hover{background:#dce2d2}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Geometry choice",
+      "kind": "custom",
+      "refersTo": "geometry-option",
+      "description": "Selected triangle choice; the label and aria-pressed state accompany its filled treatment.",
+      "html": "<div class=\"ds-preview\"><div class=\"ds-geometry-options\"><button class=\"ds-active\" aria-pressed=\"true\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" aria-hidden=\"true\"><path d=\"m16 4 13 23H3Z\"/></svg><span>Triangle</span></button></div></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-geometry-options{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.ds-geometry-options button{display:flex;gap:8px;align-items:center;justify-content:center;padding:9px 5px;border:1px solid #c6c6b3;background:#e7e6d6;border-radius:3px;font-size:10px;color:#536253}.ds-geometry-options button.ds-active{background:#315b4e;color:#f2edda;border-color:#315b4e}.ds-geometry-options button:not(:disabled):hover{border-color:#496a57}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Variable choice",
+      "kind": "custom",
+      "refersTo": "variable-option",
+      "description": "Circular serif numeral options with the actual final small-screen target size.",
+      "html": "<div class=\"ds-preview\"><div class=\"ds-variable-options\" role=\"group\" aria-label=\"Variable x\"><button aria-pressed=\"false\">1</button><button class=\"ds-active\" aria-pressed=\"true\">2</button><button aria-pressed=\"false\">3</button></div></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-variable-options{display:flex;gap:7px}.ds-variable-options button{background:none;border:1px solid #c6c6b3;border-radius:50%;width:30px;height:30px;font:600 19px var(--serif,Constant,Georgia,serif)}.ds-variable-options button.ds-active{background:#dfd9bf;border-color:#7b896d}.ds-variable-options button:hover{background:#dddac7}@media(max-width:520px){.ds-variable-options{margin-top:5px;justify-content:space-between;gap:5px}.ds-variable-options button{width:44px;height:44px;font-size:21px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Inscribed formula card",
+      "kind": "card",
+      "refersTo": "formula-card",
+      "description": "The original geometric card frame, selected lift, and written inscription state.",
+      "html": "<div class=\"ds-preview\"><button class=\"ds-formula-card ds-linear ds-selected\" aria-pressed=\"true\" aria-label=\"Select Twin Ember, 2x\"><span class=\"ds-card-top\"><span>LINEAR</span><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C10 7 5 12 5 16a7 7 0 0 0 14 0c0-4-5-9-7-13Z\"/><path d=\"M9 16c0 2 1 3 3 3\"/></svg></span><div class=\"ds-card-art\"><svg viewBox=\"0 0 200 100\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"100\" cy=\"54\" r=\"40\" stroke=\"currentColor\" stroke-width=\".6\"/><circle cx=\"100\" cy=\"54\" r=\"32\" stroke=\"currentColor\" stroke-width=\".5\"/><path d=\"m58 75 27-48 27 48Zm32 0 27-48 27 48Z\" fill=\"currentColor\" fill-opacity=\".15\" stroke=\"currentColor\"/><path d=\"M28 54h26m92 0h26\" stroke=\"currentColor\"/></svg></div><span class=\"ds-card-expression\">2x</span><span class=\"ds-card-name\">Twin Ember</span><span class=\"ds-card-description\">A spark, perfectly mirrored.</span><span class=\"ds-card-bottom\">FORMULA<span>Cost depends on x</span></span><span class=\"ds-selected-tab\">INSCRIBED</span></button></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}button:disabled:not(.enemy):not(.ds-formula-card){opacity:.48}.ds-formula-card{width:171px;height:222px;flex-shrink:0;border:1px solid #ad9e76;background:#f5efdd;box-shadow:0 7px 13px #4b4d3620;border-radius:9px;position:relative;padding:10px 10px 8px;display:flex;align-items:center;flex-direction:column;outline:4px solid #e2dcc5;outline-offset:-7px;color:#7d6543;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s;transform:rotate(-2deg)}.ds-formula-card:nth-child(2n){transform:rotate(1deg)}.ds-formula-card:nth-child(3n){transform:rotate(2deg)}.ds-formula-card:before{content:'';position:absolute;inset:7px;border:1px solid #c5b88d;border-radius:4px;pointer-events:none}.ds-formula-card.ds-quadratic{color:#64766f}.ds-formula-card.ds-additive{color:#8b6459}.ds-formula-card:not(:disabled):hover{transform:translateY(-9px) rotate(0deg);box-shadow:0 14px 18px #3c51352b}.ds-formula-card.ds-selected{transform:translateY(-12px) rotate(0deg);box-shadow:0 10px 20px #2e54452b;border:2px solid var(--teal,#2c6961);padding:9px 9px 7px}.ds-card-top{width:100%;display:flex;align-items:center;justify-content:space-between;padding:3px 4px 0;font-size:7px;letter-spacing:.13em;font-weight:600;z-index:1}.ds-card-art{height:73px;width:100%;margin-top:5px;background:#e7ddbf;overflow:hidden}.ds-quadratic .ds-card-art{background:#dce4d4}.ds-additive .ds-card-art{background:#e8d6c5}.ds-card-art svg{height:100%;width:100%}.ds-card-expression{font:600 32px/.9 var(--serif,Constant,Georgia,serif);margin-top:7px;color:#2f493b}.ds-card-name{font:600 19px var(--serif,Constant,Georgia,serif);margin-top:5px;color:#2f493b}.ds-card-description{font:italic 10px/1.3 var(--serif,Constant,Georgia,serif);max-width:135px;display:block;margin-top:3px;min-height:25px;text-align:center;color:#5c6854}.ds-card-bottom{display:flex;width:100%;justify-content:space-between;align-items:center;font-size:6px;letter-spacing:.07em;border-top:1px solid #d4caae;padding:6px 4px 0;margin-top:auto}.ds-card-bottom>span{font-size:6px;letter-spacing:0}.ds-selected-tab{position:absolute;left:25px;right:25px;top:-11px;background:var(--teal,#2c6961);color:#f3efdc;font-size:7px;letter-spacing:.13em;padding:4px 7px;border-radius:2px}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Inscription sigil",
+      "kind": "custom",
+      "description": "The actual triangle SVG construction with twelve radial ticks and a parchment formula center.",
+      "html": "<div class=\"ds-preview\"><div class=\"ds-sigil\"><svg viewBox=\"0 0 300 300\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"150\" cy=\"150\" r=\"141\" stroke=\"currentColor\" stroke-width=\".6\"/><circle cx=\"150\" cy=\"150\" r=\"130\" stroke=\"currentColor\" stroke-width=\"1.2\"/><circle cx=\"150\" cy=\"150\" r=\"112\" stroke=\"currentColor\" stroke-width=\".6\"/><g stroke=\"currentColor\"><path d=\"M269.0 150.0L278.0 150.0\"/><circle cx=\"278.0\" cy=\"150.0\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M253.05702305034822 209.5L260.85125168440817 214.0\"/><circle cx=\"260.85125168440817\" cy=\"214.0\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M209.5 253.0570230503482L214.0 260.8512516844081\"/><circle cx=\"214.0\" cy=\"260.8512516844081\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M150.0 269.0L150.0 278.0\"/><circle cx=\"150.0\" cy=\"278.0\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M90.50000000000003 253.05702305034822L86.00000000000003 260.85125168440817\"/><circle cx=\"86.00000000000003\" cy=\"260.85125168440817\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M46.94297694965179 209.5L39.148748315591845 214.0\"/><circle cx=\"39.148748315591845\" cy=\"214.0\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M31.0 150.00000000000003L22.0 150.00000000000003\"/><circle cx=\"22.0\" cy=\"150.00000000000003\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M46.94297694965178 90.50000000000003L39.14874831559183 86.00000000000003\"/><circle cx=\"39.14874831559183\" cy=\"86.00000000000003\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M90.49999999999994 46.94297694965182L85.99999999999994 39.148748315591874\"/><circle cx=\"85.99999999999994\" cy=\"39.148748315591874\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M149.99999999999997 31.0L149.99999999999997 22.0\"/><circle cx=\"149.99999999999997\" cy=\"22.0\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M209.5 46.94297694965181L214.0 39.14874831559186\"/><circle cx=\"214.0\" cy=\"39.14874831559186\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><g stroke=\"currentColor\"><path d=\"M253.05702305034816 90.49999999999994L260.8512516844081 85.99999999999994\"/><circle cx=\"260.8512516844081\" cy=\"85.99999999999994\" r=\"2.5\" fill=\"var(--paper,#f0ecdf)\"/></g><path d=\"m150 9 5 9-5 9-5-9Zm0 264 5 9-5 9-5-9ZM9 150l9-5 9 5-9 5Zm264 0 9-5 9 5-9 5Z\" fill=\"currentColor\"/><path d=\"m150 49 88 152H62Z\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"m150 247-85-147h170Z\" stroke=\"currentColor\" stroke-width=\".55\"/><circle cx=\"150\" cy=\"150\" r=\"43\" fill=\"var(--paper,#f0ecdf)\" stroke=\"currentColor\" stroke-width=\".7\"/></svg><span class=\"ds-sigil-formula\">2x</span></div></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}.ds-sigil{width:210px;height:210px;color:#688773;position:relative;display:inline-block}.ds-sigil svg{width:100%;height:100%}.ds-sigil-formula{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--teal,#2c6961);font:500 34px var(--serif,Constant,Georgia,serif);padding-top:1px}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    },
+    {
+      "name": "Parchment dialog",
+      "kind": "custom",
+      "refersTo": "modal",
+      "description": "Representative introduction dialog content and inner frame; the overlay is described in extensions.",
+      "html": "<div class=\"ds-preview\"><section class=\"ds-modal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ds-dialog-title\"><h2 id=\"ds-dialog-title\">The world is written in numbers.</h2><p>Once, the great equations held our world together. Now they are unraveling. You are an apprentice at the Academy of the Constant. Today, your first trial begins.</p><blockquote>Mathematics is the language of magic.</blockquote><button class=\"ds-primary-button\">Continue<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></button></section></div>",
+      "css": ".ds-preview{font-family:Scholar,'Segoe UI',sans-serif;font-size:14px;font-weight:400;color:#253c38}button{font:inherit;color:inherit;cursor:pointer;border:0;transition:background .18s,color .18s,transform .18s,box-shadow .18s}button:disabled{cursor:default}button:focus-visible{outline:3px solid #b87936;outline-offset:5px}button:not(:disabled):active{transform:translateY(1px)}button:disabled:not(.ds-enemy):not(.ds-formula-card){opacity:.48}.ds-modal{position:relative;width:540px;max-width:100%;max-height:calc(100dvh - 48px);overflow-y:auto;background:var(--paper,#f0ecdf);padding:34px 48px;text-align:center;box-shadow:0 20px 80px #061d25a8;border-radius:4px;color:var(--ink,#203f3b);outline:none}.ds-modal:before{content:'';position:absolute;inset:12px;border:1px solid #b5ba9c;pointer-events:none}.ds-modal h2{font:500 39px/1.04 var(--serif,Constant,Georgia,serif);max-width:390px;margin:0 auto 18px}.ds-modal>p{font-size:12px;line-height:1.9;color:#5a6556;margin:14px 0}.ds-modal blockquote{font:italic 20px/1.3 var(--serif,Constant,Georgia,serif);margin:23px 0;color:var(--teal,#2c6961)}.ds-primary-button{background:var(--teal,#2c6961);color:#f8f0db;padding:13px 20px;border-radius:3px;display:flex;gap:16px;align-items:center;justify-content:center;width:100%;font-size:12px;position:relative}.ds-primary-button:hover{background:#194b42}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Parchment-and-Ink Academy",
+    "overview": "Casting feels like a deliberate mathematical inscription at an academy examination. Warm paper, deep teal spellcraft, antique brass geometry, and literary serif headings establish a learned fantasy world. Compact sans-serif controls keep tactical choices and real arithmetic legible inside that world.\n\nThe premium fantasy TCG direction is expressed through layered card frames, engraved geometric linework, restrained motion, and an illustrated chamber. The current original SVG portraits are explicitly permitted placeholders; final anime-fantasy artwork remains a future supplied asset. Preserve original characters, frames, and symbols. No generated images or image credits are part of this implementation.",
+    "keyCharacteristics": [
+      "Warm parchment surfaces against a deep teal chamber.",
+      "Literary headings paired with compact, practical controls.",
+      "Brass hairlines, geometric sigils, and layered formula cards.",
+      "Selection and arithmetic remain explicit before a spell is cast.",
+      "Original SVG stand-ins preserve the world while final artwork is pending."
+    ],
+    "rules": [
+      {
+        "name": "The Inscription Rule",
+        "body": "Use teal to connect the formula, geometry, Ink cost, and casting action; preserve visible selected-state borders and labels alongside color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Proof Rule",
+        "body": "Preserve the final mobile arithmetic override; instructional calculations are functional content, even when ceremonial labels are smaller.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Depth Rule",
+        "body": "Preserve the combination of borders, tonal surfaces, and selective lift; shadows support the paper objects and dialog rather than every text group.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep warm parchment, manuscript ink, teal spellwork, and restrained brass geometry together.",
+      "**Do** use the bundled serif for worldbuilding and mathematics, and the bundled sans serif for tactical controls.",
+      "**Do** preserve the final mobile arithmetic size and circular variable target dimensions.",
+      "**Do** retain written selection states, visible focus, disabled semantics, and reduced-motion support.",
+      "**Do** use original SVG portraits and geometric artwork as the current permitted placeholders."
+    ],
+    "donts": [
+      "**Don't** generate images or consume image credits for this implementation.",
+      "**Don't** copy another property's characters, card frames, or symbols.",
+      "**Don't** treat the placeholder portraits as final anime-fantasy production art.",
+      "**Don't** replace explicit arithmetic or state labels with decorative effects alone.",
+      "**Don't** claim text fields, generic chips, route navigation, or form-validation states are implemented."
+    ]
+  }
+}

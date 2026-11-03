@@ -1,0 +1,11 @@
+Create one original premium anime-fantasy trading-card-game character illustration. This is a production cutout for a playable game called The Last Constant, not a finished card or an interface mockup.
+
+Character: Magister Veyra, an adult female academy examiner, poised and quietly formidable. Long ivory hair loosely swept back, intelligent teal eyes, measured expression, one asymmetric braid threaded with small brass cylinders. Tailored deep forest-teal academic coat over an ivory high-collared tunic. An angular cape falls into long architectural folds, with fine brass seams following original compass constructions. No pointed witch hat.
+
+Pose: three-quarter-to-full-body view, centred, facing slightly toward the viewer. A floating brass compass is held lightly in her right hand. Her left hand directs a small triangular spell construction made from original abstract geometry, with no letters or runes. Keep the hands and costume inside the image. Preserve the full silhouette and leave only modest transparent padding. Make her face and posture read clearly at thumbnail size.
+
+Rendering: expressive stylised human anatomy, confident cel shading, decisive ink linework, restrained painterly detail in cloth and metal. Warm window light from upper left, with cool green fill from the spell. Warm ivory, deep teal, antique brass, and subtle copper are the starting palette. The world treats magic as a learned mathematical discipline, not random mystical symbols. Beautiful but disciplined ornament; a clear silhouette and a distinct original identity.
+
+Output: portrait PNG, ideally 1024 by 1536 pixels, with a genuinely transparent background. No scenery, paper rectangle, checkerboard painted into the image, card frame, lettering, equation, title, filename, logo, signature, or watermark. Do not copy any existing character, costume, card frame, or recognisable magical symbol.
+
+The required downloaded filename is examiner.png. Do not render that filename in the image.
